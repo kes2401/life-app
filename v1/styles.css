@@ -1,0 +1,22 @@
+/* 
+Colours 
+-------
+Blue - #0984e3
+Light Blue - #74b9ff
+Light Grey - #dfe6e9
+Medium Grey = #b2bec3
+Dark Grey - #636e72
+Green - #00b894
+Light Green - #55efc4
+White - #fff
+Yellow - #fdcb6e
+Light Yellow - #ffeaa7
+Black - #2d3436
+Red - #d63031
+Light Red - #ff7675
+*/
+
+body {
+    background-color: #0984e3;
+    color: #fff;
+}
