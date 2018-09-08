@@ -1,0 +1,25 @@
+*- user name
+*- local time / day / date
+- weather (current weather, weather for the day, tomorrow's weather in the evening time)
+- daily inspirational quotes
+- map showing current location
+- latest news items from favourite sites
+- calender (Google calendar?)
+- upcoming events in your calendar
+- personal weekly planner (time boxing tasks, ...)
+- work weekly planner (time boxing, tasks, ...)
+- to-do list
+- user's spotify playlists
+- discover weekly spotify playlist access (see ifttt)
+- notebook
+- voice notes
+- pomodoro timer
+- sleep tracker / tool
+- messaging
+- Books to read
+- Films/TV to watch
+- Music to listen to
+- google drive
+- lastest youtube videos from subscriptions
+- fitness tool
+- alarm clock
