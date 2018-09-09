@@ -2,6 +2,11 @@ let user = 'Keith';
 
 $('.greeting').text(`Hello, ${user}!`);
 
+let quote = quotes[new Date().getDate() - 1];
+$('p.quote').text(`"${quote.quote}"`);
+$('p.person').text(`-${quote.person}`);
+
+
 function timer() {
     let time = new Date();
     let h = time.getHours();

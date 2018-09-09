@@ -1,7 +1,7 @@
 *- user name
 *- local time / day / date
 - weather (current weather, weather for the day, tomorrow's weather in the evening time)
-- daily inspirational quotes
+*- daily inspirational quotes
 - map showing current location
 - latest news items from favourite sites
 - calender (Google calendar?)
