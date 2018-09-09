@@ -6,6 +6,39 @@ let quote = quotes[new Date().getDate() - 1];
 $('p.quote').text(`"${quote.quote}"`);
 $('p.person').text(`-${quote.person}`);
 
+let lat;
+let lng;
+// check if navigator.geolocation object is available in the browser and if so get weather
+if (!navigator.geolocation){
+    alert("Geolocation is not supported by your browser.");
+} else {
+    navigator.geolocation.getCurrentPosition(success, error);
+
+    // code to run once geolocation data has successfully been obtained
+    function success(position) {
+        lat = position.coords.latitude;
+        lng = position.coords.longitude;
+        $.getJSON(`http://api.openweathermap.org/data/2.5/weather?lat=${lat.toFixed(3)}&lon=${lng.toFixed(3)}&units=metric&APPID=4fa408523a0e38e40107a969ee53d5d6`, function(data) {
+            if (data.weather[0].main.toLowerCase() === 'clouds') {
+                $('.weather-icon').html('<ion-icon name="cloudy"></ion-icon>');
+            } else {
+                $('.weather-icon').html('<ion-icon name="alert"></ion-icon>');
+            }
+            $('.temp').text(`${data.main.temp} °C`);
+            $('.location').text(data.name);
+        });   
+    }
+    
+    // code to run if geolocation data could not be retrieved
+    function error() {
+        alert("Unable to retrieve your location");
+    }
+}
+
+
+
+
+
 
 function timer() {
     let time = new Date();

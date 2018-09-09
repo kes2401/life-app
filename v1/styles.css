@@ -20,3 +20,7 @@ body {
     background-color: #0984e3;
     color: #fff;
 }
+
+.weather-icon {
+    font-size: 2rem;
+}
