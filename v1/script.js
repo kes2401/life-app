@@ -21,11 +21,17 @@ if (!navigator.geolocation){
         $.getJSON(`http://api.openweathermap.org/data/2.5/weather?lat=${lat.toFixed(3)}&lon=${lng.toFixed(3)}&units=metric&APPID=4fa408523a0e38e40107a969ee53d5d6`, function(data) {
             if (data.weather[0].main.toLowerCase() === 'clouds') {
                 $('.weather-icon').html('<ion-icon name="cloudy"></ion-icon>');
+            } else if (data.weather[0].main.toLowerCase() === 'rain') {
+                $('.weather-icon').html('<ion-icon name="rainy"></ion-icon>');
+            } else if (data.weather[0].main.toLowerCase() === 'sun') {
+                $('.weather-icon').html('<ion-icon name="sunny"></ion-icon>');
             } else {
                 $('.weather-icon').html('<ion-icon name="alert"></ion-icon>');
             }
-            $('.temp').text(`${data.main.temp} °C`);
+            $('.temp').text(`${Math.round(data.main.temp)} °C`);
             $('.location').text(data.name);
+
+            console.log(data.weather[0].main);
         });   
     }
     
