@@ -31,7 +31,7 @@ if (!navigator.geolocation){
             $('.temp').text(`${Math.round(data.main.temp)} °C`);
             $('.location').text(data.name);
 
-            console.log(data.weather[0].main);
+            console.log(data.weather[0].main); // simply to show weather type and check that there is an icon in place - TESTING
         });   
     }
     
@@ -42,8 +42,11 @@ if (!navigator.geolocation){
 }
 
 
-
-
+$.getJSON('https://newsapi.org/v2/top-headlines?country=ie&apiKey=12b3c80a04254683bdede020021a4d39&category=sports', function(data) {
+    for (let i = 0; i < data.articles.length; i++) {
+        $('.sports-news').append(`<li>${data.articles[i].title} - ${data.articles[i].source.name} - <a href="${data.articles[i].url}" target="_blank">Read...</a></li>`);
+    }
+});
 
 
 function timer() {
